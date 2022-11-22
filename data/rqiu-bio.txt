@@ -1,0 +1,20 @@
+Ri-Zhao (Roger) Qiu is a first-year research MS student
+at the Computer Science Department of the University of
+Illinois at Urbana-Champaign (UIUC), where he is co-advised
+by Prof. Kris Hauser and Prof. Yuxiong Wang. He is
+interested in creating robotics perception algorithms
+(segmentation and SLAM) specialized for indoor environments
+to help solve fundamental challenges in creating embodied
+robot agents.
+
+Prior to his Master’s study, he received his bachelor’s
+degree from UIUC with highest distinction in Statistics
+and Computer Science and highest distinction in Mathematics.
+He worked as a computer vision engineering intern at Megvii
+Research Nanjing in 2019, where he was advised by
+Prof. Xiu-Shen Wei to develop Auto Augmentation algorithms
+as a part of an AutoML software stack. In 2020, he was a
+participant in the Illinois CS REU program, where he
+worked with Prof. Kris Hauser to develop perception
+algorithms for disinfection robotics to help fight the
+COVID-19 pandemic.
