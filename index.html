@@ -50,7 +50,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/rqiu.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/rqiu.jpg" class="hoverZoomLink"></a>
+              <a href="images/rqiu.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/rqiu_circle.jpg" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -73,8 +73,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='gaps_image'>
-                  <img src='images/gaps_after.jpg' width="160"></div>
-                <img src='images/gaps_before.jpg' width="160">
+                  <img src='images/gaps_static.jpg' width="160"></div>
+                <img src='images/gaps_static.jpg' width="160">
               </div>
               <script type="text/javascript">
                 function gaps_start() {
@@ -95,63 +95,62 @@
               <strong>Ri-Zhao Qiu</strong>, 
               Peiyi Chen,
               Wangzhe Sun,
-              Yuxiong Wang,
-              Kris Hauser
+              <a href="https://yxw.web.illinois.edu/">Yuxiong Wang</a>,
+              <a href="https://kkhauser.web.illinois.edu/">Kris Hauser</a>
               <br>
               Under Review for <em>ICLR</em>, 2023.
               <br>
               <!-- TBD -->
               <a href="">project page</a> /
               <a href="https://github.com/RogerQi/dl_codebase/blob/master/docs/GAPS.md">code</a> /
-              <a href="https://openreview.net/pdf?id=cDVL245jZa">paper</a>
+              <a href="./pdf/gaps_openreview_ver.pdf">paper</a>
               <p></p>
               <p>
-                A guided data synthesis process via copy-paste to efficiently use few partially-labeled
-                images for continual learning
+                We design a method that enables continual segmentation learning with few annotations
+                via a guided data synthesis process.
               </p>
             </td>
           </tr>
 
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()">
+          <tr onmouseout="raslam_stop()" onmouseover="raslam_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='dreamfusion_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/dreamfusion.mp4" type="video/mp4">
+                <source src="images/srecon_resized.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video></div>
-                <img src='images/dreamfusion.jpg' width="160">
+                <img src='images/srecon.jpg' width="160">
               </div>
               <script type="text/javascript">
-                function dreamfusion_start() {
+                function raslam_start() {
                   document.getElementById('dreamfusion_image').style.opacity = "1";
                 }
 
-                function dreamfusion_stop() {
+                function raslam_stop() {
                   document.getElementById('dreamfusion_image').style.opacity = "0";
                 }
-                dreamfusion_stop()
+                raslam_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://dreamfusion3d.github.io/">
-                <papertitle>DreamFusion: Text-to-3D using 2D Diffusion</papertitle>
+              <a href="">
+                <papertitle>Real-time Semantic 3D Reconstruction for High-Touch Surface Recognition for Robotic Disinfection</papertitle>
               </a>
               <br>
-              <a href="https://cs.stanford.edu/~poole/">Ben Poole</a>,
-              <a href="https://www.ajayj.com/">Ajay Jain</a>,
-              <strong>Jonathan T. Barron</strong>,
-							<a href="https://bmild.github.io/">Ben Mildenhall</a>
+              <strong>Ri-Zhao Qiu*</strong>, 
+              <a href="https://alvinsunyixiao.github.io/">Yixiao Sun*</a>,
+              Joao Marcos Correia Marques,
+              <a href="https://kkhauser.web.illinois.edu/">Kris Hauser</a>
               <br>
-              <em>arXiv</em>, 2022
+              <em>IROS</em>, 2022
               <br>
-              <a href="https://dreamfusion3d.github.io/">project page</a>
+              <a href="https://github.com/uiuc-iml/RA-SLAM">code</a>
               /
-              <a href="https://arxiv.org/abs/2209.14988">arXiv</a>
-              /
-              <a href="https://dreamfusion3d.github.io/gallery.html">gallery</a>
+              <a href="./pdf/icra_srecon.pdf">paper</a>
               <p></p>
               <p>
-              We optimize a NeRF from scratch using a pretrained text-to-image diffusion model to do text-to-3D generative modeling.
+                We design a disinfection system that can priortize cleaning of high-touch surfaces like human cleaners
+                by co-designing perception and planning algorithms.
               </p>
             </td>
           </tr>          
