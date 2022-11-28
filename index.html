@@ -101,7 +101,6 @@
               Under Review for <em>ICLR</em>, 2023.
               <br>
               <!-- TBD -->
-              <a href="">project page</a> /
               <a href="https://github.com/RogerQi/dl_codebase/blob/master/docs/GAPS.md">code</a> /
               <a href="./pdf/gaps_openreview_ver.pdf">paper</a>
               <p></p>
@@ -147,13 +146,57 @@
               <a href="https://github.com/uiuc-iml/RA-SLAM">code</a>
               /
               <a href="./pdf/icra_srecon.pdf">paper</a>
+              /
+              <a href="https://uofi.box.com/s/ksxgtsxlz9q2zpnt5fj6wayzsno34mvc">video</a>
               <p></p>
               <p>
                 We design a disinfection system that can priortize cleaning of high-touch surfaces like human cleaners
                 by co-designing perception and planning algorithms.
               </p>
             </td>
-          </tr>          
+          </tr>
+
+          <tr onmouseout="robomaster_stop()" onmouseover="robomaster_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='robomaster_image'>
+                  <img src='images/rm_hover_resized.jpg' width="160"></div>
+                <img src='images/rm_start_resized.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function robomaster_start() {
+                  document.getElementById('robomaster_image').style.opacity = "1";
+                }
+
+                function robomaster_stop() {
+                  document.getElementById('robomaster_image').style.opacity = "0";
+                }
+                robomaster_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://github.com/illini-robomaster/">
+                <papertitle>Perception-control Software Stack for RoboMaster Robots</papertitle>
+              </a>
+              <br>
+              Zuodong (Nickel) Liang*,
+              Yixiao (Alvin) Sun*,
+              <strong>Ri-Zhao Qiu*</strong>,
+              and other members of Illini Robomaster.
+              <br>
+              <em>DJI RoboMaster Open-source Award</em>, 2018
+              <br>
+              <a href="https://github.com/illini-robomaster/">Project Page</a> /
+              <a href="https://github.com/illini-robomaster/iRM_Embedded_2018">Embedded Stack (2018)</a> /
+              <a href="https://github.com/alvinsunyixiao/IlliniRM">Perception Stack (2018)</a> /
+              <a href="https://github.com/illini-robomaster/RM_CV_101">RM Vision 101</a>
+              <p></p>
+              <p>
+                We designed and built robots from bolts and metal to perception algorithm. I mainly helped
+                with writing STM32 application software and perception code.
+              </p>
+            </td>
+          </tr>
 
         </tbody></table>
 
@@ -177,7 +220,7 @@
             <li>Course Assistant / Grader</li>
             <ul>
               <li>Intelligent Robotics (CS498), UIUC <div style="float:right; text-align:right">2021</div><br></li>
-              <li>Computer Architecture (CS233), UIUC <div style="float:right; text-align:right">2019 - 2020</div><br></li>
+              <li>Computer Architecture (CS233), UIUC <div style="float:right; text-align:right">2019, 2020</div><br></li>
             </ul>
 
             <li>Volunteering</li>
