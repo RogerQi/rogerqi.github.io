@@ -198,6 +198,44 @@
             </td>
           </tr>
 
+          <tr onmouseout="motion_planning_stop()" onmouseover="motion_planning_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='motion_planning_image'>
+                  <img src='images/motion_planning_hover_resized.png' width="160"></div>
+                <img src='images/motion_planning_start_resized.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function motion_planning_start() {
+                  document.getElementById('motion_planning_image').style.opacity = "1";
+                }
+
+                function motion_planning_stop() {
+                  document.getElementById('motion_planning_image').style.opacity = "0";
+                }
+                motion_planning_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://github.com/RogerQi/CVAE_Motion_Planning">
+                <papertitle>Codebase for Robotics Motion Planning</papertitle>
+              </a>
+              <br>
+              <strong>Ri-Zhao Qiu</strong>
+              <br>
+              <em>Personal Project</em>
+              <br>
+              <a href="https://github.com/RogerQi/CVAE_Motion_Planning">Codebase</a>
+              <p></p>
+              <p>
+                I implemented a codebase for robotics motion planning, which supports common problems
+                like 2D narrow passage, bug traps, and robot arm grasping. It implements a variety of
+                algorithms including RRT, RRT*, bRRT, PRM, FMT. In addition to uniform sampling, it also
+                supports non-uniform sampler using conditional autoencoder.
+              </p>
+            </td>
+          </tr>
+
         </tbody></table>
 
 				
