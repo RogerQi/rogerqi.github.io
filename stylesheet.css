@@ -120,6 +120,21 @@ name {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+.wide_one {
+  width: 160px;
+  height: 90px;
+  position: relative;
+}
+
+.wide_two {
+  width: 160px;
+  height: 90px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;

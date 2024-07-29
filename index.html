@@ -55,7 +55,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Selected Research</heading>
+              <heading>Selected Research (hover to play)</heading>
               <p>
                 My research interests lie in the intersection of robotics and computer vision. My research aims at
                 enhancing the mobile manipulation capabilities of robots via CV methods.
@@ -70,9 +70,24 @@
           <!-- ==================== Start papers ==================== -->
           <!-- ==================== Start papers ==================== -->
 
-          <tr>
+          <tr onmouseout="feature_splatting_stop()" onmouseover="feature_splatting_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/feature_splatting.avifs" style="width:auto; height:auto; max-width:100%;">
+              <div class="wide_one">
+                <div class="wide_two" id='feature_splatting_image'>
+                  <img src="images/feature_splatting.avif" style="width:auto; height:auto; max-width:100%;">
+                </div>
+                <img src="images/feature_splatting_first.jpg" style="width:auto; height:auto; max-width:100%;">
+              </div>
+              <script type="text/javascript">
+                function feature_splatting_start() {
+                  document.getElementById('feature_splatting_image').style.opacity = "1";
+                }
+
+                function feature_splatting_stop() {
+                  document.getElementById('feature_splatting_image').style.opacity = "0";
+                }
+                feature_splatting_stop()
+              </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <papertitle>Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing</papertitle>
@@ -95,9 +110,24 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="vbc_stop()" onmouseover="vbc_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/vbc.avif" style="width:auto; height:auto; max-width:100%;">
+              <div class="wide_one">
+                <div class="wide_two" id='vbc_image'>
+                  <img src="images/vbc.avif" style="width:auto; height:auto; max-width:100%;">
+                </div>
+                <img src="images/vbc_first.jpg" style="width:auto; height:auto; max-width:100%;">
+              </div>
+              <script type="text/javascript">
+                function vbc_start() {
+                  document.getElementById('vbc_image').style.opacity = "1";
+                }
+
+                function vbc_stop() {
+                  document.getElementById('vbc_image').style.opacity = "0";
+                }
+                vbc_stop()
+              </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <papertitle>Visual Whole-Body Control for Legged Loco-Manipulation</papertitle>
@@ -122,9 +152,24 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="aligndiff_stop()" onmouseover="aligndiff_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/aligndiff.avifs" style="width:auto; height:auto; max-width:100%;">
+              <div class="one">
+                <div class="two" id='aligndiff_image'>
+                  <img src="images/aligndiff.avif" style="width:auto; height:auto; max-width:100%;">
+                </div>
+                <img src="images/aligndiff_first.jpg" style="width:auto; height:auto; max-width:100%;">
+              </div>
+              <script type="text/javascript">
+                function aligndiff_start() {
+                  document.getElementById('aligndiff_image').style.opacity = "1";
+                }
+
+                function aligndiff_stop() {
+                  document.getElementById('aligndiff_image').style.opacity = "0";
+                }
+                aligndiff_stop()
+              </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <papertitle>AlignDiff: Aligning Diffusion Models for General Few-Shot Segmentation</papertitle>
@@ -146,9 +191,23 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="geff_stop()" onmouseover="geff_start()" bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/9_scenes_zoom_8x.avif" style="width:auto; height:auto; max-width:100%;">
+              <div class="wide_one">
+                <div class="wide_two" id='geff_image'>
+                  <img src="images/geff.avif" style="width:auto; height:auto; max-width:100%;">
+                </div>
+                <img src="images/geff_first.jpg" style="width:auto; height:auto; max-width:100%;">
+              </div>
+              <script type="text/javascript">
+                function geff_start() {
+                  document.getElementById('geff_image').style.opacity = "1";
+                }
+                function geff_stop() {
+                  document.getElementById('geff_image').style.opacity = "0";
+                }
+                geff_stop()
+              </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <papertitle>Learning Generalizable Feature Fields for Mobile Manipulation</papertitle>
