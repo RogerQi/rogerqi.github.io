@@ -70,7 +70,46 @@
           <!-- ==================== Start papers ==================== -->
           <!-- ==================== Start papers ==================== -->
 
-          <tr onmouseout="feature_splatting_stop()" onmouseover="feature_splatting_start()" bgcolor="#ffffd0">
+          <tr onmouseout=graspsplats_stop() onmouseover=graspsplats_start() bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='graspsplats_image'>
+                  <img src="images/graspsplats.avif" style="width:auto; height:auto; max-width:100%;">
+                </div>
+                <img src="images/graspsplats_first.jpg" style="width:auto; height:auto; max-width:100%;">
+              </div>
+              <script type="text/javascript">
+                function graspsplats_start() {
+                  document.getElementById('graspsplats_image').style.opacity = "1";
+                }
+                function graspsplats_stop() {
+                  document.getElementById('graspsplats_image').style.opacity = "0";
+                }
+                graspsplats_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>GraspSplats: Efficient Manipulation with 3D Feature Splatting</papertitle>
+              <br>
+              <a href="https://jimazeyu.github.io/">Mazeyu Ji*</a>,
+              <strong>Ri-Zhao Qiu*</strong>,
+              <a href="https://maureenzou.github.io/">Xueyan Zou</a>,
+              <a href="https://xiaolonw.github.io/">Xiaolong Wang</a>
+              <br>
+              <em>CoRL</em>, 2024
+              <br>
+              <!-- TBD -->
+              <a href="https://graspsplats.github.io/">project website</a> /
+              <a href="https://arxiv.org/pdf/2409.02084">paper</a> /
+              <a href="https://github.com/jimazeyu/GraspSplats">code</a>
+              <p></p>
+              <p>
+                Splatting features enable precise and efficient grasping in dynamic environments.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout=feature_splatting_stop() onmouseover=feature_splatting_start() bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="wide_one">
                 <div class="wide_two" id='feature_splatting_image'>
