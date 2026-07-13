@@ -278,29 +278,78 @@ name {
   box-shadow: 2px 2px 0 var(--ink);
 }
 
-.profile-panel td:last-child a {
-  display: block;
-  background: transparent;
-  outline: 0;
+.profile-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.profile-panel td:last-child img {
-  display: block;
-  width: 100% !important;
-  max-width: none !important;
-  aspect-ratio: 4 / 5;
+.profile-carousel:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 12px;
+}
+
+.profile-carousel.is-dragging {
+  cursor: grabbing;
+}
+
+.profile-card {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
   border: 3px solid var(--ink);
   border-radius: 8px;
-  object-fit: cover;
-  filter: saturate(0.82) contrast(1.08);
-  box-shadow: 7px 7px 0 var(--ink);
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  background: var(--paper);
+  transform-origin: 50% 100%;
 }
 
-.profile-panel td:last-child a:hover img,
-.profile-panel td:last-child a:focus-visible img {
+.profile-card--back {
+  background: var(--acid);
+  box-shadow: 7px 7px 0 var(--ink);
+  transform: translate(8px, 8px) rotate(2deg) scale(0.98);
+}
+
+.profile-card--front {
+  box-shadow: 7px 7px 0 var(--ink);
+  will-change: transform, opacity;
+  transition: transform 220ms cubic-bezier(0.2, 0.85, 0.35, 1), opacity 180ms ease;
+}
+
+.profile-carousel.is-dragging .profile-card--front {
+  transition: none;
+}
+
+.profile-carousel:hover:not(.is-dragging) .profile-card--front {
   transform: translate(-2px, -2px) rotate(-1deg);
   box-shadow: 9px 9px 0 var(--ink);
+}
+
+.profile-card img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  pointer-events: none;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.82) contrast(1.08);
+  -webkit-user-drag: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .news-panel {
@@ -636,9 +685,8 @@ span.highlight {
     width: min(100%, 390px) !important;
   }
 
-  .profile-panel td:last-child img {
+  .profile-carousel {
     aspect-ratio: 5 / 4;
-    object-position: center 28%;
   }
 
   .news-panel td {

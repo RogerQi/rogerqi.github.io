@@ -14,6 +14,7 @@
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
 
   <script src="js/scramble.js"></script>
+  <script src="js/profile-carousel.js" defer></script>
 </head>
 
 <body>
@@ -57,7 +58,15 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/rgr.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/rgr.jpg" class="hoverZoomLink"></a>
+              <div class="profile-carousel" id="profile-carousel" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Profile photos; drag or swipe left and right to browse">
+                <div class="profile-card profile-card--back" aria-hidden="true">
+                  <img src="images/swiping/2.png" alt="" draggable="false">
+                </div>
+                <div class="profile-card profile-card--front">
+                  <img src="images/swiping/1.jpg" alt="Ri-Zhao (Roger) Qiu with a Shiba Inu" draggable="false">
+                </div>
+                <span class="visually-hidden" data-carousel-status aria-live="polite" aria-atomic="true">Photo 1 of 2</span>
+              </div>
             </td>
           </tr>
         </tbody></table>
