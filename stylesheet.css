@@ -1,3 +1,67 @@
+@font-face {
+  font-family: "Anton";
+  src: url("fonts/Anton-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("fonts/BarlowCondensed-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("fonts/BarlowCondensed-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("fonts/BarlowCondensed-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("fonts/BarlowCondensed-BoldItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("fonts/BarlowCondensed-BlackItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("fonts/IBMPlexMono-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --ink: #171717;
   --paper: #f4f0e7;
@@ -5,8 +69,9 @@
   --coral: #f55f5f;
   --acid: #d9ef61;
   --sky: #a8d9ed;
-  --display: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  --body: "Avenir Next Condensed", "Arial Narrow", Arial, sans-serif;
+  --display: "Anton", sans-serif;
+  --body: "Barlow Condensed", sans-serif;
+  --mono: "IBM Plex Mono", monospace;
 }
 
 * {
@@ -15,6 +80,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-synthesis: none;
 }
 
 body {
@@ -71,9 +137,10 @@ a:focus-visible {
   max-width: 980px;
   margin: 0 auto 16px;
   color: var(--coral);
-  font-family: var(--display);
+  font-family: var(--body);
   font-size: clamp(42px, 7vw, 74px);
   font-style: italic;
+  font-weight: 900;
   letter-spacing: -1px;
   line-height: 0.95;
   text-align: center;
@@ -144,7 +211,7 @@ name {
   max-width: 620px;
   font-family: var(--display);
   font-size: clamp(42px, 6.2vw, 70px);
-  font-style: italic;
+  font-style: normal;
   letter-spacing: -0.5px;
   line-height: 0.88;
   text-transform: uppercase;
@@ -206,7 +273,7 @@ name {
   padding: 3px 8px;
   border: 2px solid var(--ink);
   background: var(--acid);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--mono);
   font-size: 12px;
   box-shadow: 2px 2px 0 var(--ink);
 }
@@ -259,7 +326,7 @@ name {
   background: var(--coral);
   font-family: var(--display);
   font-size: 30px;
-  font-style: italic;
+  font-style: normal;
   line-height: 1;
   text-transform: uppercase;
   box-shadow: 3px 3px 0 var(--ink);
@@ -303,9 +370,10 @@ name {
 heading {
   display: inline-block;
   margin-bottom: 4px;
-  font-family: var(--display);
+  font-family: var(--body);
   font-size: clamp(30px, 5vw, 48px);
   font-style: italic;
+  font-weight: 900;
   letter-spacing: 0.2px;
   line-height: 1;
   text-transform: uppercase;
@@ -439,7 +507,7 @@ heading {
   padding: 3px 6px;
   border: 1px solid var(--ink);
   background: var(--acid);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--mono);
   font-size: 8px;
   font-weight: 800;
   letter-spacing: 0.4px;
@@ -491,7 +559,7 @@ papertitle {
   border-radius: 8px;
   background: var(--acid);
   box-shadow: 5px 5px 0 var(--ink);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--mono);
   font-size: 13px;
   font-weight: 700;
 }
@@ -507,7 +575,7 @@ papertitle {
 
 .site-footer p {
   margin: 0;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--mono);
   font-size: 10px !important;
   text-transform: uppercase;
 }
