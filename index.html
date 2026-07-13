@@ -6,6 +6,7 @@
   <!-- Modified from Jon Barron's webpage! -->
   <meta name="author" content="Ri-Zhao Qiu"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ri-Zhao Qiu — robotics and computer vision researcher.">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
@@ -14,15 +15,17 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <header class="page-masthead" aria-label="Site title">
+    <span>Ri-Zhao (Roger) Qiu</span>
+  </header>
+
+  <table class="site-shell" style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="profile-panel" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
               <p style="text-align:center">
-                <name>Ri-Zhao (Roger) Qiu</name>
-                <br>
                 <img src="./images/sign.jpg" align="top" height="50">
               </p>
               <p>
@@ -44,10 +47,10 @@
                 <noscript><i>Please enable Javascript to view</i></noscript>
               </div>
               <p style="text-align:center">
-                <a href="https://scholar.google.com/citations?hl=en&user=uH0re54AAAAJ">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/RogerQiu_42">Twitter</a> &nbsp/&nbsp
-                <a href="https://github.com/RogerQi/">Github</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/rizhaoqiu/">LinkedIn</a> &nbsp/&nbsp
+                <a href="https://scholar.google.com/citations?hl=en&amp;user=uH0re54AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://twitter.com/RogerQiu_42">Twitter</a> &nbsp;/&nbsp;
+                <a href="https://github.com/RogerQi/">Github</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/rizhaoqiu/">LinkedIn</a> &nbsp;/&nbsp;
                 <a href="https://xzman.github.io/yuqixue/cats-page/cats.html">Cat Senpai</a>
               </p>
             </td>
@@ -57,7 +60,7 @@
           </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="news-panel" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tbody><tr>
           <td>
             <h2>News</h2>
@@ -70,7 +73,7 @@
         </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="section-intro" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Selected Research (hover to play)</heading>
@@ -548,9 +551,9 @@
             <td style="padding:20px;width:30%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='graspsplats_image'>
-                  <img src="images/graspsplats.avif" style="width:auto; height:auto; max-width:100%;">
+                  <img src="images/graspsplats_wide.webp" style="width:auto; height:auto; max-width:100%;">
                 </div>
-                <img src="images/graspsplats_first.jpg" style="width:auto; height:auto; max-width:100%;">
+                <img src="images/graspsplats_first_wide.jpg" style="width:auto; height:auto; max-width:100%;">
               </div>
               <script type="text/javascript">
                 function graspsplats_start() {
@@ -670,9 +673,9 @@
             <td style="padding:20px;width:30%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='aligndiff_image'>
-                  <img src="images/aligndiff.avif" style="width:auto; height:auto; max-width:100%;">
+                  <img src="images/aligndiff_wide.webp" style="width:auto; height:auto; max-width:100%;">
                 </div>
-                <img src="images/aligndiff_first.jpg" style="width:auto; height:auto; max-width:100%;">
+                <img src="images/aligndiff_first_wide.jpg" style="width:auto; height:auto; max-width:100%;">
               </div>
               <script type="text/javascript">
                 function aligndiff_start() {
@@ -710,8 +713,8 @@
             <td style="padding:20px;width:30%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='gaps_image'>
-                  <img src='images/gaps_static.jpg' width="200"></div>
-                <img src='images/gaps_static.jpg' width="200">
+                  <img src='images/gaps_static_wide.jpg' width="200"></div>
+                <img src='images/gaps_static_wide.jpg' width="200">
               </div>
               <script type="text/javascript">
                 function gaps_start() {
@@ -752,10 +755,10 @@
             <td style="padding:20px;width:30%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='dreamfusion_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/srecon_resized.mp4" type="video/mp4">
+                <source src="images/srecon_resized_wide.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video></div>
-                <img src='images/srecon.jpg' width="200">
+                <img src='images/srecon_wide.jpg' width="200">
               </div>
               <script type="text/javascript">
                 function raslam_start() {
@@ -794,21 +797,21 @@
 
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="section-intro compact" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
           <td style="padding:20px;width:100%;vertical-align:middle">
             <heading>Selected Projects</heading>
           </td>
         </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="project-list" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
           <tr onmouseout="robomaster_stop()" onmouseover="robomaster_start()">
             <td style="padding:20px;width:30%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='robomaster_image'>
-                  <img src='images/rm_hover_resized.jpg' width="200"></div>
-                <img src='images/rm_start_resized.jpg' width="200">
+                  <img src='images/rm_hover_wide.jpg' width="200"></div>
+                <img src='images/rm_start_wide.jpg' width="200">
               </div>
               <script type="text/javascript">
                 function robomaster_start() {
@@ -847,8 +850,8 @@
             <td style="padding:20px;width:30%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='motion_planning_image'>
-                  <img src='images/motion_planning_hover_resized.png' width="200"></div>
-                <img src='images/motion_planning_start_resized.png' width="200">
+                  <img src='images/motion_planning_hover_wide.png' width="200"></div>
+                <img src='images/motion_planning_start_wide.png' width="200">
               </div>
               <script type="text/javascript">
                 function motion_planning_start() {
@@ -882,7 +885,7 @@
         </tbody></table>
 
 				
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+		<table class="section-intro compact" width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
               <heading>Services & Other Activities</heading>
@@ -890,32 +893,20 @@
           </tr>
         </tbody></table>
 
-        <p>Reviewer for CVPR, ECCV, ICLR, CoRL, IROS, and RA-L.</p>
+        <p class="service-card">Reviewer for CVPR, ECCV, ICLR, CoRL, IROS, and RA-L.</p>
         
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                Borrowed from Jon Barron's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
       </td>
     </tr>
   </table>
+  <script>
+    emailScramble = new scrambledString(document.getElementById('email'),
+      'emailScramble', 'rizhaoqiu@gmail.com',
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]);
+  </script>
+
+  <div class="visitor-map">
+    <img src="//clustrmaps.com/map_v2.png?cl=080808&amp;w=300&amp;t=n&amp;d=vRXZpOtSRbWu_SOzxzV3KfBVb-MY5uuFnlr-KywQwgY&amp;co=ffffff&amp;ct=808080" alt="Visitor map">
+  </div>
 </body>
-
-<script>
-	emailScramble = new scrambledString(document.getElementById('email'),
-		'emailScramble', 'rqiuusdedui@.c',
-		[1, 3, 4, 5, 7, 9, 10, 12, 13, 14, 2, 6, 11, 8]);
-</script>
-
-<!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=n&d=vRXZpOtSRbWu_SOzxzV3KfBVb-MY5uuFnlr-KywQwgY&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
-<center>
-  <img src='//clustrmaps.com/map_v2.png?cl=080808&w=300&t=n&d=vRXZpOtSRbWu_SOzxzV3KfBVb-MY5uuFnlr-KywQwgY&co=ffffff&ct=808080'/>
-</center>
 
 </html>
