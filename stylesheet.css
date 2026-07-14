@@ -72,6 +72,33 @@
   --display: "Anton", sans-serif;
   --body: "Barlow Condensed", sans-serif;
   --mono: "IBM Plex Mono", monospace;
+  --font-body: clamp(15px, calc(10px + 0.3125vw), 18px);
+  --font-masthead-max: clamp(74px, calc(47.333px + 1.6667vw), 90px);
+  --font-heading-max: clamp(48px, calc(38px + 0.625vw), 54px);
+  --font-paper-title: clamp(22px, calc(17px + 0.3125vw), 25px);
+  --font-ui: clamp(13px, calc(9.667px + 0.2083vw), 15px);
+  --font-mono-label: clamp(12px, calc(8.667px + 0.2083vw), 14px);
+  --font-news-heading: clamp(30px, calc(20px + 0.625vw), 36px);
+  --font-hover-label: clamp(8px, calc(4.667px + 0.2083vw), 10px);
+  --font-badge: clamp(11px, calc(7.667px + 0.2083vw), 13px);
+  --font-footer: clamp(10px, calc(6.667px + 0.2083vw), 12px);
+  --site-width: clamp(1000px, calc(666.667px + 20.8333vw), 1200px);
+  --body-padding-top: clamp(28px, calc(14.667px + 0.8333vw), 36px);
+  --body-padding-inline: clamp(18px, calc(8px + 0.625vw), 24px);
+  --body-padding-bottom: clamp(70px, calc(43.333px + 1.6667vw), 86px);
+  --shell-padding: clamp(28px, calc(14.667px + 0.8333vw), 36px);
+  --profile-media-width: clamp(300px, calc(216.667px + 5.2083vw), 350px);
+  --profile-gap: clamp(34px, calc(20.667px + 0.8333vw), 42px);
+  --profile-copy-width: clamp(620px, calc(453.333px + 10.4167vw), 720px);
+  --section-copy-width: clamp(760px, calc(526.667px + 14.5833vw), 900px);
+  --news-label-width: clamp(120px, calc(70px + 3.125vw), 150px);
+  --research-media-width: clamp(270px, calc(186.667px + 5.2083vw), 320px);
+  --card-gap: clamp(18px, calc(8px + 0.625vw), 24px);
+  --news-padding: clamp(20px, calc(10px + 0.625vw), 26px);
+  --card-padding-block: clamp(18px, calc(11.333px + 0.4167vw), 22px);
+  --card-padding-inline: clamp(20px, calc(10px + 0.625vw), 26px);
+  --section-spacing: clamp(34px, calc(17.333px + 1.0417vw), 44px);
+  --visitor-map-width: clamp(300px, calc(200px + 6.25vw), 360px);
 }
 
 * {
@@ -86,7 +113,7 @@ html {
 body {
   min-width: 300px;
   margin: 0;
-  padding: 28px 18px 70px;
+  padding: var(--body-padding-top) var(--body-padding-inline) var(--body-padding-bottom);
   color: var(--ink);
   background-color: var(--coral);
   background-image:
@@ -104,7 +131,7 @@ p,
 a,
 strong {
   font-family: var(--body);
-  font-size: 15px;
+  font-size: var(--font-body);
 }
 
 a {
@@ -134,11 +161,11 @@ a:focus-visible {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  max-width: 980px;
+  max-width: var(--site-width);
   margin: 0 auto 16px;
   color: var(--coral);
   font-family: var(--body);
-  font-size: clamp(42px, 7vw, 74px);
+  font-size: clamp(42px, 7vw, var(--font-masthead-max));
   font-style: italic;
   font-weight: 900;
   letter-spacing: -1px;
@@ -155,8 +182,8 @@ a:focus-visible {
 }
 
 .site-shell {
-  width: min(100%, 1000px) !important;
-  max-width: 1000px !important;
+  width: min(100%, var(--site-width)) !important;
+  max-width: none !important;
   margin: 0 auto 34px !important;
   overflow: hidden;
   border: 5px solid var(--ink) !important;
@@ -167,10 +194,12 @@ a:focus-visible {
     linear-gradient(105deg, transparent 0 56%, rgba(23, 23, 23, 0.025) 56% 57%, transparent 57%);
   background-size: 5px 5px, 100% 100%;
   box-shadow: 10px 10px 0 var(--ink);
+  container-name: site-shell;
+  container-type: inline-size;
 }
 
 .site-shell > tbody > tr > td {
-  padding: 28px !important;
+  padding: var(--shell-padding) !important;
 }
 
 .profile-panel,
@@ -184,10 +213,10 @@ a:focus-visible {
 
 .profile-panel > tbody > tr {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 2fr) minmax(var(--profile-media-width), 1fr);
   align-items: center;
-  gap: 34px;
-  padding-bottom: 28px;
+  gap: var(--profile-gap);
+  padding-bottom: var(--shell-padding);
 }
 
 .profile-panel td {
@@ -208,7 +237,7 @@ a:focus-visible {
 
 name {
   display: block;
-  max-width: 620px;
+  max-width: var(--profile-copy-width);
   font-family: var(--display);
   font-size: clamp(42px, 6.2vw, 70px);
   font-style: normal;
@@ -229,7 +258,7 @@ name {
 }
 
 .profile-panel td:first-child > p:not(:first-child) {
-  max-width: 620px;
+  max-width: var(--profile-copy-width);
   line-height: 1.55;
 }
 
@@ -253,7 +282,7 @@ name {
   background: var(--paper);
   box-shadow: 2px 2px 0 var(--ink);
   font-family: var(--display);
-  font-size: 13px;
+  font-size: var(--font-ui);
   font-weight: 400;
   letter-spacing: 0.5px;
   text-decoration: none;
@@ -274,7 +303,7 @@ name {
   border: 2px solid var(--ink);
   background: var(--acid);
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: var(--font-mono-label);
   box-shadow: 2px 2px 0 var(--ink);
 }
 
@@ -362,10 +391,10 @@ name {
 
 .news-panel td {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 18px;
+  grid-template-columns: var(--news-label-width) 1fr;
+  gap: var(--card-gap);
   align-items: start;
-  padding: 20px !important;
+  padding: var(--news-padding) !important;
 }
 
 .news-panel h2 {
@@ -374,7 +403,7 @@ name {
   border: 3px solid var(--ink);
   background: var(--coral);
   font-family: var(--display);
-  font-size: 30px;
+  font-size: var(--font-news-heading);
   font-style: normal;
   line-height: 1;
   text-transform: uppercase;
@@ -404,7 +433,7 @@ name {
 
 .section-intro {
   position: relative;
-  margin-top: 34px !important;
+  margin-top: var(--section-spacing) !important;
 }
 
 .section-intro td {
@@ -420,7 +449,7 @@ heading {
   display: inline-block;
   margin-bottom: 4px;
   font-family: var(--body);
-  font-size: clamp(30px, 5vw, 48px);
+  font-size: clamp(30px, 5vw, var(--font-heading-max));
   font-style: italic;
   font-weight: 900;
   letter-spacing: 0.2px;
@@ -431,7 +460,7 @@ heading {
 }
 
 .section-intro p {
-  max-width: 760px;
+  max-width: var(--section-copy-width);
   margin: 10px 0 0;
   line-height: 1.5;
 }
@@ -445,8 +474,8 @@ heading {
 .publication-list > tbody,
 .project-list > tbody {
   display: grid;
-  gap: 18px;
-  padding-top: 18px;
+  gap: var(--card-gap);
+  padding-top: var(--card-gap);
 }
 
 .publication-list tr,
@@ -454,7 +483,7 @@ heading {
   position: relative;
   z-index: 0;
   display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
+  grid-template-columns: minmax(var(--research-media-width), 30%) minmax(0, 1fr);
   overflow: hidden;
   border: 3px solid var(--ink);
   border-radius: 9px;
@@ -503,7 +532,7 @@ heading {
 .publication-list td:last-child,
 .project-list td:last-child {
   align-self: center;
-  padding: 18px 20px !important;
+  padding: var(--card-padding-block) var(--card-padding-inline) !important;
   line-height: 1.35;
 }
 
@@ -557,7 +586,7 @@ heading {
   border: 1px solid var(--ink);
   background: var(--acid);
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: var(--font-hover-label);
   font-weight: 800;
   letter-spacing: 0.4px;
   pointer-events: none;
@@ -567,7 +596,7 @@ papertitle {
   display: block;
   margin-bottom: 7px;
   font-family: var(--display);
-  font-size: 22px;
+  font-size: var(--font-paper-title);
   font-weight: 400;
   letter-spacing: 0.25px;
   line-height: 1.05;
@@ -597,7 +626,7 @@ papertitle {
   padding: 1px 5px;
   border: 1px solid var(--ink);
   background: var(--coral);
-  font-size: 11px;
+  font-size: var(--font-badge);
   text-transform: uppercase;
 }
 
@@ -609,7 +638,7 @@ papertitle {
   background: var(--acid);
   box-shadow: 5px 5px 0 var(--ink);
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: var(--font-ui);
   font-weight: 700;
 }
 
@@ -625,12 +654,12 @@ papertitle {
 .site-footer p {
   margin: 0;
   font-family: var(--mono);
-  font-size: 10px !important;
+  font-size: var(--font-footer) !important;
   text-transform: uppercase;
 }
 
 .visitor-map {
-  max-width: 300px;
+  max-width: var(--visitor-map-width);
   margin: 0 auto;
 }
 
@@ -651,7 +680,45 @@ span.highlight {
   background: var(--acid);
 }
 
+@container site-shell (max-width: 720px) {
+  .profile-panel > tbody > tr {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .profile-panel td:last-child {
+    width: min(100%, 390px) !important;
+  }
+
+  .profile-carousel {
+    aspect-ratio: 5 / 4;
+  }
+
+  .news-panel td,
+  .publication-list tr,
+  .project-list tr {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-list td:first-child,
+  .project-list td:first-child {
+    border-right: 0;
+    border-bottom: 3px solid var(--ink);
+  }
+
+  .one,
+  .two,
+  .wide_one,
+  .wide_two {
+    aspect-ratio: 16 / 9;
+  }
+}
+
 @media (max-width: 760px) {
+  :root {
+    --font-body: 16px;
+  }
+
   body {
     padding: 22px 12px 50px;
   }
@@ -734,6 +801,25 @@ span.highlight {
   .publication-list td:last-child,
   .project-list td:last-child {
     padding: 15px !important;
+  }
+}
+
+@media (hover: none) {
+  .profile-carousel:hover:not(.is-dragging) .profile-card--front {
+    transform: none;
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+
+  .publication-list tr:hover,
+  .project-list tr:hover {
+    transform: none;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+}
+
+@media (pointer: coarse) {
+  .profile-panel td:first-child > p:last-child a {
+    min-height: 40px;
   }
 }
 
