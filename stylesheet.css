@@ -714,6 +714,12 @@ span.highlight {
   }
 }
 
+@media (min-width: 1600px) {
+  :root {
+    --site-width: 75vw;
+  }
+}
+
 @media (max-width: 760px) {
   :root {
     --font-body: 16px;
