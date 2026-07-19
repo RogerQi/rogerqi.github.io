@@ -717,6 +717,16 @@ span.highlight {
 @media (min-width: 1600px) {
   :root {
     --site-width: 75vw;
+    --font-body: clamp(18px, 1vw, 23px);
+    --font-masthead-max: clamp(96px, 5vw, 120px);
+    --font-heading-max: clamp(60px, 3vw, 72px);
+    --font-paper-title: clamp(28px, 1.3vw, 34px);
+    --font-ui: clamp(17px, 0.75vw, 19px);
+    --font-mono-label: clamp(16px, 0.68vw, 18px);
+    --font-news-heading: clamp(40px, 1.8vw, 46px);
+    --font-hover-label: clamp(11px, 0.5vw, 13px);
+    --font-badge: clamp(15px, 0.625vw, 17px);
+    --font-footer: clamp(13px, 0.55vw, 15px);
   }
 }
 
