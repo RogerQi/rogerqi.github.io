@@ -98,7 +98,6 @@
   --card-padding-block: clamp(18px, calc(11.333px + 0.4167vw), 22px);
   --card-padding-inline: clamp(20px, calc(10px + 0.625vw), 26px);
   --section-spacing: clamp(34px, calc(17.333px + 1.0417vw), 44px);
-  --visitor-map-width: clamp(300px, calc(200px + 6.25vw), 360px);
 }
 
 * {
@@ -656,20 +655,6 @@ papertitle {
   font-family: var(--mono);
   font-size: var(--font-footer) !important;
   text-transform: uppercase;
-}
-
-.visitor-map {
-  max-width: var(--visitor-map-width);
-  margin: 0 auto;
-}
-
-.visitor-map img {
-  display: block;
-  max-width: 100%;
-  border: 3px solid var(--ink);
-  background: var(--paper);
-  box-shadow: 5px 5px 0 var(--ink);
-  filter: grayscale(1) contrast(1.15);
 }
 
 .fade {
